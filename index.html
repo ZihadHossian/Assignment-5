@@ -11,11 +11,155 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Sora:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Dev Board</title>
 </head>
-<body>
-    <header>
-
+<body class="bg-slate-200 py-5">
+    <header class="w-10/11 mx-auto my-4">
+        <section class="flex bg-white justify-between p-3 rounded-xl ">
+            <div class="flex items-center justify-center">
+                <div class="max-w-11/12"><img class="w-3/4" src="./assets/logo.png" alt=""></div>
+                <h1 class="text-3xl">Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <div class="flex items-center gap-5">
+                <div class="flex text-xl items-center gap-2 bg-slate-200 px-2 py-1 rounded-3xl">
+                    <input type="checkbox" checked class="accent-blue-700 w-5 h-5 ring-blue-700" />
+                    <h3 id="total-complete-task" class="font-bold">23</h3>
+                </div>
+                <button id="color-changer-btn" class="bg-slate-200 p-1 cursor-pointer rounded-full max-w-full"><img class="w-2/3  mx-auto" src="./assets/theme-btn.png" alt=""></button>
+            </div>
+        </section>
     </header>
-    <main></main>
-    <footer></footer>
+    <main class="w-10/11 mx-auto grid grid-cols-4 gap-5">
+        <section class="col-span-3 grid rounded-xl bg-white gap-6 grid-rows-9">
+            <div class="grid grid-cols-11 gap-4 row-span-2">
+                <!-- task Assigned -->
+                <div class="  col-span-3 flex bg-slate-200 justify-evenly rounded-lg p-4 gap-1 items-center ml-3 mt-3">
+                    <div class="bg-white p-5 flex items-center justify-center rounded-full">
+                        <input type="checkbox" checked class="accent-blue-700 w-5 h-5" />
+                    </div>
+                    <div class="">
+                        <h1 class="text-slate-600 text-nowrap">Task Assigned</h1>
+                        <p id="complete-assigned-task" class="text-xl font-bold">6</p>
+                    </div>
+                </div>
+                <!-- discover something -->
+                <div class="bg-linear-to-r from-indigo-700 to-indigo-300 col-span-5 flex justify-evenly mt-3 p-3 rounded-xl items-center">
+                    <div class="max-w-12 max-h-12"><img class="h-full w-full" src="./assets/board.png" alt=""></div>
+                    <h1 class="text-white font-normal text-2xl">Discover Something <br> New Today!</h1>
+                </div>
+                <!-- calender and Date -->
+                <div class=" mr-3 mt-3 rounded-lg bg-slate-200 col-span-3 flex items-center justify-evenly " >
+                    <div class="bg-white p-3 rounded-full "><img  src="./assets/calender.png" alt=""></div>
+                    <div>
+                        <h1 id="day-name"></h1>
+                        <p id="full-date" class="font-bold"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- 6 card section -->
+            <div class=" row-span-7 grid gap-5 px-4 my-5 grid-cols-3">
+                <!-- card-1 -->
+                <div class="card bg-slate-200 card-md -py-6 shadow-sm">
+                    <div class="card-body">
+                      <div class="w-20"><h4 class="bg-white rounded-xl p-2">ShopEase</h4></div>
+                      <h2 id="title-fix" class="card-title">Fix Mobile Button Issue </h2>
+                      <p class=" bg-white p-3 rounded-lg">Debug using Chrome DevTools, check for overlapping... </p>
+                      <div class="justify-between mt-2 card-actions">
+                        <div>
+                            <h3>Deadline</h3>
+                            <p class="font-semibold">21 March 2025</p>
+                        </div>
+                        <button id="fix-btn" class="btn btn-primary">Completed</button>
+                      </div>
+                    </div>
+                  </div>
+                 <!-- card-2 -->
+                <div class="card bg-slate-200 card-md -py-6 shadow-sm">
+                    <div class="card-body">
+                      <div class="w-20"><h4 class="bg-white rounded-xl p-2">CloudSync</h4></div>
+                      <h2 id="title-dark" class="card-title">Add Dark Mode</h2>
+                      <p class=" bg-white p-3 rounded-lg">Store the user's preference in localStorage, update CSS... </p>
+                      <div class="justify-between mt-2 card-actions">
+                        <div>
+                            <h3>Deadline</h3>
+                            <p class="font-semibold">21 March 2025</p>
+                        </div>
+                        <button id="dark-btn" class="btn btn-primary">Completed</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card-3 -->
+                <div class="card bg-slate-200 card-md -py-6 shadow-sm">
+                    <div class="card-body">
+                      <div class="w-20"><h4 class="bg-white rounded-xl p-2 text-center">SwiftPay</h4></div>
+                      <h2 id="title-optimize" class="card-title">Optimize  Home page </h2>
+                      <p class=" bg-white p-3 rounded-lg">Debug using Chrome DevTools, check for overlapping... </p>
+                      <div class="justify-between mt-2 card-actions">
+                        <div>
+                            <h3>Deadline</h3>
+                            <p class="font-semibold">21 March 2025</p>
+                        </div>
+                        <button id="optimize-btn" class="btn btn-primary">Completed</button>
+                      </div>
+                    </div>
+                  </div>
+                    <!-- card-4-->
+                <div class="card bg-slate-200 card-md -py-6 shadow-sm">
+                    <div class="card-body">
+                      <div class="w-20"><h4 class="bg-white rounded-xl p-2 text-center">Meta</h4></div>
+                      <h2 id="title-emoji" class="card-title">Add new emoji 🤲</h2>
+                      <p class=" bg-white p-3 rounded-lg">Store the user's preference in localStorage, update CSS... </p>
+                      <div class="justify-between mt-2 card-actions">
+                        <div>
+                            <h3>Deadline</h3>
+                            <p class="font-semibold">21 March 2025</p>
+                        </div>
+                        <button id="emoji-btn" class="btn btn-primary">Completed</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- card-5 -->
+                <div class="card bg-slate-200 card-md -py-6 shadow-sm">
+                    <div class="card-body">
+                      <div class="w-20"><h4 class="bg-white rounded-xl p-2 text-nowrap">Google LLC</h4></div>
+                      <h2 id="title-openai" class="card-title">Integrate OpenAI API  </h2>
+                      <p class=" bg-white p-3 rounded-lg">Debug using Chrome DevTools, check for overlapping... </p>
+                      <div class="justify-between mt-2 card-actions">
+                        <div>
+                            <h3>Deadline</h3>
+                            <p class="font-semibold">21 March 2025</p>
+                        </div>
+                        <button id="openai-btn" class="btn btn-primary">Completed</button>
+                      </div>
+                    </div>
+                  </div>
+                 <!-- card-6 -->
+                <div class="card bg-slate-200 card-md -py-6 shadow-sm">
+                    <div class="card-body">
+                      <div class="w-20"><h4 class="bg-white rounded-xl p-2 text-center">SwiftPay</h4></div>
+                      <h2 id="title-home" class="card-title">Optimize  Home page</h2>
+                      <p class=" bg-white p-3 rounded-lg">Store the user's preference in localStorage, update CSS ... </p>
+                      <div class="justify-between mt-2 card-actions">
+                        <div>
+                            <h3>Deadline</h3>
+                            <p class="font-semibold">21 March 2025</p>
+                        </div>
+                        <button id="home-btn" class="btn btn-primary">Completed</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+        <section class="col-span-1 bg-white rounded-xl flex flex-col items-center gap-3 pt-3">
+            <div class="flex gap-5">
+                <img src="./assets/activity.png" alt="">
+                <h1>Activity</h1>
+            </div>
+            <button id="clear-btn" class="btn btn-primary">Clear History</button>
+            <div id="new-activity" class="m-2 gap-7 bg-slate-200 rounded-xl text-center"></div>
+        </section>
+    </main>
+    <script src="./Dev-Board-js/background.js"></script>
+    <script src="./Dev-Board-js/calender-date.js"></script>
+    <script src="./Dev-Board-js/utilities.js"></script>
+    <script src="./Dev-Board-js/toggle.js"></script>
 </body>
 </html>
