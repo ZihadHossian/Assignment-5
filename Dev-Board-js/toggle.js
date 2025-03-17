@@ -1,5 +1,6 @@
 document.getElementById('fix-btn').addEventListener('click',function(event){
     event.preventDefault();
+    alert("Board Update Successful")
     addTotalTask("total-complete-task");
     totalAssignedTask("complete-assigned-task");
     addActivity("title-fix")
@@ -8,6 +9,7 @@ document.getElementById('fix-btn').addEventListener('click',function(event){
 //card-2
 document.getElementById('dark-btn').addEventListener('click',function(event){
     event.preventDefault();
+    alert("Board Update Successful")
     addTotalTask("total-complete-task");
     totalAssignedTask("complete-assigned-task");
     addActivity("title-dark")
@@ -16,6 +18,7 @@ document.getElementById('dark-btn').addEventListener('click',function(event){
 // card-3
 document.getElementById('optimize-btn').addEventListener('click',function(event){
     event.preventDefault();
+    alert("Board Update Successful")
     addTotalTask("total-complete-task");
     totalAssignedTask("complete-assigned-task");
     addActivity("title-optimize")
@@ -24,6 +27,7 @@ document.getElementById('optimize-btn').addEventListener('click',function(event)
 // card-4
 document.getElementById('emoji-btn').addEventListener('click',function(event){
     event.preventDefault();
+    alert("Board Update Successful")
     addTotalTask("total-complete-task");
     totalAssignedTask("complete-assigned-task");
     addActivity("title-emoji")
@@ -32,6 +36,7 @@ document.getElementById('emoji-btn').addEventListener('click',function(event){
 // card-5
 document.getElementById('openai-btn').addEventListener('click',function(event){
     event.preventDefault();
+    alert("Board Update Successful")
     addTotalTask("total-complete-task");
     totalAssignedTask("complete-assigned-task");
     addActivity("title-openai")
@@ -40,6 +45,7 @@ document.getElementById('openai-btn').addEventListener('click',function(event){
 // card-6
 document.getElementById('home-btn').addEventListener('click',function(event){
     event.preventDefault();
+    alert("Board Update Successful")
     addTotalTask("total-complete-task");
     totalAssignedTask("complete-assigned-task");
     addActivity("title-home")
@@ -50,4 +56,9 @@ document.getElementById("clear-btn").addEventListener("click",function(event){
     event.preventDefault();
     let allActivity=document.getElementById("new-activity");
     allActivity.innerHTML="";
+})
+// Discover Something
+document.getElementById("discover-something").addEventListener("click",function(event){
+    event.preventDefault();
+    window.location.href="./blog.html"
 })
