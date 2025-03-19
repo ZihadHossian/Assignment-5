@@ -26,23 +26,40 @@
     <main class="w-10/11 mx-auto grid grid-rows-5 gap-3">
         <div class="bg-white row-span-1 rounded-xl p-3">
             <h3 class="border-b-1 border-slate-300 p-3 text-lg font-bold">Question-1: What are the different ways to select an element in the DOM?</h3>
-            <p class="p-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis aut hic ipsa commodi cum aspernatur excepturi odio vitae voluptas ratione! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, enim.</p>
+            <p class="p-3">getElementById()	Best for unique elements with an id <br>
+                getElementsByClassName() Best for multiple elements with the same class <br>
+                getElementsByTagName() Best for selecting elements by tag name <br>
+                querySelector()	Best for selecting the first match using CSS selectors <br>
+                querySelectorAll() Best for selecting multiple elements using CSS selectors <br>
+                getElementsByName()Best for selecting form elements by name</p>
         </div>
         <div class="bg-white row-span-1 rounded-xl p-3">
             <h3 class="border-b-1 border-slate-300 p-3 text-lg font-bold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h3>
-            <p class="p-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis aut hic ipsa commodi cum aspernatur excepturi odio vitae voluptas ratione! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, enim.</p>
+            <p class="p-3">
+               innerHTML  Returns or sets the HTML content inside an element. <br>
+               innerText  Returns or sets only the visible text inside an element. <br>
+               textContent Returns or sets all text content, including hidden text.
+            </p>
         </div>
         <div class="bg-white row-span-1 rounded-xl p-3">
             <h3 class="border-b-1 border-slate-300 p-3 text-lg font-bold">Question-3: What is event delegation in the DOM?</h3>
-            <p class="p-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis aut hic ipsa commodi cum aspernatur excepturi odio vitae voluptas ratione! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, enim.</p>
+            <p class="p-3">Event delegation is a technique in JavaScript where a parent element handles events for multiple child elements, even if they are added dynamically. Instead of adding event listeners to each child element, we add a single listener to the parent and use event bubbling to detect which child was clicked.</p>
         </div>
         <div class="bg-white row-span-1 rounded-xl p-3">
             <h3 class="border-b-1 border-slate-300 p-3 text-lg font-bold">Question-4: What is event bubbling in the DOM?</h3>
-            <p class="p-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis aut hic ipsa commodi cum aspernatur excepturi odio vitae voluptas ratione! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, enim.</p>
+            <p class="p-3">Event bubbling is a concept in the DOM event propagation model, where an event starts at the target element and then bubbles up to its ancestors (parent, grandparent) triggering their event listeners (if present).</p>
         </div>
         <div class="bg-white row-span-1 rounded-xl p-3">
             <h3 class="border-b-1 border-slate-300 p-3 text-lg font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</h3>
-            <p class="p-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis aut hic ipsa commodi cum aspernatur excepturi odio vitae voluptas ratione! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, enim.</p>
+            <ul>
+                <li>You can create an element using document.createElement()</li>
+                <li>Using appendChild() (Adds as the Last Child)</li>
+                <li>Using prepend() (Adds as the First Child)</li>
+                <li>Using insertBefore() (Inserts Before a Specific Element)</li>
+                <li>Using innerHTML (Directly Injects HTML - Less Preferred)</li>
+                <li>Using removeChild() (Removes a Specific Child Element) </li>
+                <li>Using remove() (Simpler Way to Remove an Element)</li>
+            </ul>
         </div>
     </main>
     <script src="./Dev-Board-js/toggle-2.js"></script>
